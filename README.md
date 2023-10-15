@@ -33,7 +33,7 @@ This project enables interaction with LLM via the OpenAI API.
 
 3. **Installing Node Dependencies**:
 
-   - Navigate to the `server` directory.
+   - Navigate to the `website/server` directory.
    - Install the dependencies with the following command:
 
       ```shell
@@ -45,7 +45,7 @@ This project enables interaction with LLM via the OpenAI API.
 1. **Starting the Server**:
 
    - Install [nodejs](https://nodejs.org/en/) if you haven't already.
-   - Navigate to the `server` directory.
+   - Navigate to the `website/server` directory.
    - Start the server with the following command:
 
       ```shell
@@ -56,12 +56,12 @@ This project enables interaction with LLM via the OpenAI API.
 
 2. **Starting the Frontend**:
 
-   - We are using VSCode's [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the client on port `5500`.
+   - We are using VSCode's [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the client on port `5500`. Note that the root directory for the server is `website/frontend`.
 
 ## Project Structure
 
 - `inference`: Contains the code for the Python Inference.
-- `server`: Contains the code for the NodeJS Server.
-- `frontend`: Contains the code for the Frontend.
+- `website/server`: Contains the code for the NodeJS Server.
+- `website/frontend`: Contains the code for the Frontend.
 - `datasets`: Contains datasets used for training the probability models.
 - `prob_model`: Contains the Jupyter Notebook with the probability model analysis.

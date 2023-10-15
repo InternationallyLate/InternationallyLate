@@ -61,5 +61,5 @@ if __name__ == '__main__':
         del result["answer"]
 
         # Save the result to 'conversation.json'
-        with open('conversation.json', 'w') as outfile:
+        with open('../../conversation.json', 'w') as outfile:
             json.dump(result, outfile, indent=4)

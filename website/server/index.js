@@ -32,8 +32,12 @@ httpServer.listen(portNumber, () => {
 });
 
 async function openairesponse (data) {
-    const response = spawnSync('python', ['../inference/fn.py', '-f', '../database/data.json', '-m', data]).stdout.toString();
+    let response = spawnSync('python', ['../../inference/fn.py', '-f', '../../prob_model/data.json', '-m', data]);
     // wait for two seconds
+    console.log(response.stdout.toString());
+    console.log(response.stderr.toString());
+    response = response.stdout.toString();
+
     await new Promise(resolve => setTimeout(resolve, 2000));
     // const response = 'ok';
     // console.log(response.length);
