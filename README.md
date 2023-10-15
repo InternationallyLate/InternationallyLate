@@ -3,6 +3,13 @@
 
 This project enables interaction with LLM via the OpenAI API.
 
+# participants:
+- Moaaz Elwan: a 3rd-year grad student in the physics department working on experimental HEP (DM search). I believe that AI is generally a catalyst for academia and business.
+- Karloina Garcia: an astronomy department grad student working on simulating interstellar mediums. ML and AI are already a big part of my research and I'm excited to implement them in a novel manner.
+- Ioannis Michaloliakos: I am a graduate student in the physics department working on gravitational-wave data analysis. I entered this competition because I am interested in creating real-time applications that leverage the huge potential of recent advancements in generative AI, and the way that it can be applied to education.
+- Pawan Prakash: I'm a third-year Physics PhD Student. I work in condensed matter physics and material informatics. I think AI is a great tool to solve real work problems; like the one we are solving in this Hackathon.
+
+  
 # Project work flow 
 ![work_flow](assets/work_flow.png)
 
