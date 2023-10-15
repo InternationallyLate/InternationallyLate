@@ -16,7 +16,7 @@ This project enables interaction with LLM via the OpenAI API.
 
 ### Starting a New Conversation
 
-Execute the following command to start a new interaction with LLM:
+Go to the `api_stuff` directory. Execute the following command to start a new interaction with LLM:
 
 ```bash
 python fn.py --file ./../prob_model/data.json --string "Your initial question to LLM?"
