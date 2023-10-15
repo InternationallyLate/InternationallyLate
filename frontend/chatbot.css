@@ -1,0 +1,131 @@
+.chatbot {
+    /* position it in the center as a single page chat app */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* give it dimensions */
+    width: 400px;
+    /* give it a background */
+    background: #fff;
+    /* make it look like a chat app */
+    border-radius: 10px;
+    border-top: 1px solid #eee;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.13);
+}
+
+.chatbot-history {
+    padding: 1rem;
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chatbot-body-input-div {
+    /* position the textarea at the bottom and full width */
+    bottom: 0;
+    width: 100%;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    /* stick it to the bottom even if the chatbot is scrollable */
+    margin-top: auto;
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+.chatbot-body-input-div > textarea {
+    /* make it look like a chat app input */
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 1rem;
+    resize: none;
+    /* text at the top */
+    vertical-align: top;
+}
+
+.chatbot-header {
+    /* make it look like a chat app header */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.chatbot-header-close {
+    /* position the close button at the top right */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* make it look like a button */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+/* .message-bot should be slightly on the left */
+/* .message-user should be slightly on the right */
+.message-bot {
+    /* position it on the left */
+    position: relative;
+    left: 10px;
+    /* make it look like a chat bubble */
+    padding: 10px;
+    border-radius: 10px;
+    /* verizon colors */
+    border: 3px solid #D52B1E;
+    background-color: black;
+    color: #fff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* make it look like it's coming from the left */
+    margin-bottom: 10px;
+    margin-right: 50%;
+    /* bottom left corner should be no radius */
+    border-bottom-left-radius: 0;
+}
+
+.message-bot.typing::after {
+    /* make it look like a typing indicator */
+    content: '...';
+    animation: typing 2s infinite;
+}
+
+@keyframes typing {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.message-user {
+    /* position it on the right */
+    position: relative;
+    right: 10px;
+    /* make it look like a chat bubble of the user on the right */
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0084ff;
+    color: #fff;
+    /* make it look like it's coming from the right */
+    margin-bottom: 10px;
+    margin-left: 50%;
+    text-align: right;
+    /* if a word is too long break it into multiple lines */
+    word-break: break-all;
+    /* bottom right corner should be no radius */
+    border-bottom-right-radius: 0;
+}
