@@ -1,6 +1,10 @@
+![example](assets/proj.png)
 # InternationallyLate
 
 This project enables interaction with LLM via the OpenAI API.
+
+# Project work flow 
+![work_flow](assets/work_flow.png)
 
 ## Setup
 
