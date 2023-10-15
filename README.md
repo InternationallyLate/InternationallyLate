@@ -33,6 +33,7 @@ This project enables interaction with LLM via the OpenAI API.
 
 3. **Installing Node Dependencies**:
 
+   - Install [nodejs](https://nodejs.org/en/) if you haven't already.
    - Navigate to the `website/server` directory.
    - Install the dependencies with the following command:
 
@@ -44,7 +45,6 @@ This project enables interaction with LLM via the OpenAI API.
 
 1. **Starting the Server**:
 
-   - Install [nodejs](https://nodejs.org/en/) if you haven't already.
    - Navigate to the `website/server` directory.
    - Start the server with the following command:
 
@@ -56,7 +56,7 @@ This project enables interaction with LLM via the OpenAI API.
 
 2. **Starting the Frontend**:
 
-   - We are using VSCode's [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the client on port `5500`. Note that the root directory for the server is `website/frontend`.
+   - We are using VSCode's [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the client on port `5500`. Note that the LiveServer root directory in `/.vscode/settings.json` is `website/frontend`.
 
 ## Project Structure
 
