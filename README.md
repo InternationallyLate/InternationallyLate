@@ -5,28 +5,62 @@ This project enables interaction with LLM via the OpenAI API.
 ## Setup
 
 1. **Setting Up Environment Variables**:
-   - Navigate to the `api_stuff` directory.
+
+   - Navigate to the `inference` directory.
    - Create a `.env` file.
    - Add the following content to the `.env` file:
-     ```
-     OPENAI_API_KEY=your_key_here
-     ```
 
-## Running the API Interaction
+      ```JSON
+      OPENAI_API_KEY=<your_openai_key>
+      ```
 
-### Starting a New Conversation
+      where `<your_openai_key>` is your OpenAI API key (remove the angle brackets).
 
-Go to the `api_stuff` directory. Execute the following command to start a new interaction with LLM:
+2. **Installing Python Dependencies**:
 
-```bash
-python fn.py --file ./../prob_model/data.json --string "Your initial question to LLM?"
-```
+   - Create a conda environment with the following command:
 
-### Continuing the Conversation
+      ```shell
+      conda env create --name <env> --file environment.yml
+      ```
 
-For subsequent questions, use:
+   - Activate the environment with the following command:
 
-```bash
-python fn.py --file ./conversation.json --string "Your follow-up question?"
-```
-Note: Simply replace the content within the quotes after --string for each new question. You can use this command repeatedly for ongoing interactions, updating the question as needed.
+    ```shell
+    conda activate <env>
+    ```
+
+3. **Installing Node Dependencies**:
+
+   - Navigate to the `server` directory.
+   - Install the dependencies with the following command:
+
+      ```shell
+      npm install
+      ```
+
+## Running the Project
+
+1. **Starting the Server**:
+
+   - Install [nodejs](https://nodejs.org/en/) if you haven't already.
+   - Navigate to the `server` directory.
+   - Start the server with the following command:
+
+      ```shell
+      npm run dev
+      ```
+
+      The server will be running on port `3500`.
+
+2. **Starting the Frontend**:
+
+   - We are using VSCode's [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the client on port `5500`.
+
+## Project Structure
+
+- `inference`: Contains the code for the Python Inference.
+- `server`: Contains the code for the NodeJS Server.
+- `frontend`: Contains the code for the Frontend.
+- `datasets`: Contains datasets used for training the probability models.
+- `prob_model`: Contains the Jupyter Notebook with the probability model analysis.
