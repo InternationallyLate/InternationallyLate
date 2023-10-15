@@ -24,6 +24,7 @@ This project enables interaction with LLM via the OpenAI API.
       conda env create --name <env> --file environment.yml
       ```
 
+      where `<env>` is the name of the environment.
    - Activate the environment with the following command:
 
       ```shell
