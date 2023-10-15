@@ -5,7 +5,7 @@ import argparse
 import os
 
 
-# only used in first time the question is asked
+# add the new message to the JSON file
 def modify_json_content(data, new_string):
     # Append a new message with role 'user' and the given content
     user_message = {
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     openai.api_key = API_KEY
 
     parser = argparse.ArgumentParser(description='Modify a JSON file with a new user message and then use it with OpenAI API.')
-    parser.add_argument('--file', required=True, help='Path to the JSON file')
+    parser.add_argument('-f', '--file', required=True, help='Path to the JSON file')
     parser.add_argument('-m', '--string', required=True, help='Content string for the new user message')
     args = parser.parse_args()
 
