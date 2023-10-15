@@ -97,7 +97,7 @@ def main(IP_add):
     mony= draw_histogram_for_zipcode(file_path,zip_code)
     age_gr=assumed_age(filepath)
     # Example usage
-    data_to_store = {"messages": [{"role": "system","content": f" You are serving in a verizon store at {zip_code}. Assume the client can afford spending {mony} us dollars per month and they are within {age_gr} age group"},       {"role": "user","content": ""}]}
+    data_to_store = {"messages": [{"role": "system","content": f" You are serving in a verizon store at {zip_code}. You are a local in such area. The client can afford spending {mony} us dollars per month and they are within {age_gr} age group accorrding to the average person living in that area. Though, try to deduce the actual age and budget of the client."}]}
     
     json_file_path = "./data.json"
     generate_json_file(data_to_store, json_file_path)
