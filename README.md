@@ -10,7 +10,7 @@ This project enables interaction with LLM via the OpenAI API.
    - Create a `.env` file.
    - Add the following content to the `.env` file:
 
-      ```JSON
+      ```text
       OPENAI_API_KEY=<your_openai_key>
       ```
 
@@ -26,9 +26,9 @@ This project enables interaction with LLM via the OpenAI API.
 
    - Activate the environment with the following command:
 
-    ```shell
-    conda activate <env>
-    ```
+      ```shell
+      conda activate <env>
+      ```
 
 3. **Installing Node Dependencies**:
 
