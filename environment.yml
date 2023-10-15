@@ -4,4 +4,6 @@ dependencies:
   - openai
   - numpy
   - python-dotenv
-  
+  - scikit-learn
+  - requests
+  - openpyxl
