@@ -2,22 +2,15 @@
 # InternationallyLate
 
 This project enables interaction with LLM via the OpenAI API.
-
-# participants:
-- Pawan Prakash: I'm a third-year Physics PhD Student. I work in condensed matter physics and material informatics. I think AI is a great tool to solve real work problems; like the one we are solving in this Hackathon.
-- Moaaz Elwan: a 3rd-year grad student in the physics department working on experimental HEP (DM search). I believe that AI is generally a catalyst for academia and business.
-- Karloina Garcia: an astronomy department grad student working on simulating interstellar mediums. ML and AI are already a big part of my research and I'm excited to implement them in a novel manner.
-- Ioannis Michaloliakos: I am a graduate student in the physics department working on gravitational-wave data analysis. I entered this competition because I am interested in creating real-time applications that leverage the huge potential of recent advancements in generative AI, and the way that it can be applied to education.
-
   
-# Project work flow 
+# Project Workflow 
 ![work_flow](assets/work_flow.png)
 
 ## Setup
 
 1. **Setting Up Environment Variables**:
 
-   - Navigate to the `inference` directory.
+   - Navigate to the `inference/` directory.
    - Create a `.env` file.
    - Add the following content to the `.env` file:
 
@@ -45,7 +38,7 @@ This project enables interaction with LLM via the OpenAI API.
 3. **Installing Node Dependencies**:
 
    - Install [nodejs](https://nodejs.org/en/) if you haven't already.
-   - Navigate to the `website/server` directory.
+   - Navigate to the `server` directory.
    - Install the dependencies with the following command:
 
       ```shell
@@ -54,25 +47,18 @@ This project enables interaction with LLM via the OpenAI API.
 
 ## Running the Project
 
-1. **Starting the Server**:
+- Navigate to the `server/` directory.
+- Start the server with the following command:
 
-   - Navigate to the `website/server` directory.
-   - Start the server with the following command:
+   ```shell
+   npm run dev
+   ```
 
-      ```shell
-      npm run dev
-      ```
-
-      The server will be running on port `3500`.
-
-2. **Starting the Frontend**:
-
-   - We are using VSCode's [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the client on port `5500`. Note that the LiveServer root directory in `/.vscode/settings.json` is `website/frontend`.
+   The server will be running on port `3500`. You can access the website at `127.0.0.1:3500`.
 
 ## Project Structure
 
 - `inference`: Contains the code for the Python Inference.
-- `website/server`: Contains the code for the NodeJS Server.
-- `website/frontend`: Contains the code for the Frontend.
+- `server`: Contains the code for the Express server, including the API and the frontend.
 - `datasets`: Contains datasets used for training the probability models.
 - `prob_model`: Contains the Jupyter Notebook with the probability model analysis.
