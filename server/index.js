@@ -1,11 +1,30 @@
-import { createServer } from 'http';
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { Server } from 'socket.io';
 import { spawnSync } from 'child_process';
 
-const httpServer = createServer();
-const portNumber = 3500;
 
-const io = new Server(httpServer, {
+const app = express();
+const portNumber = process.env.PORT || 3500;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const staticOptions = {
+    index: 'chatbot.html',
+};
+
+app.use(express.static(
+    path.join(__dirname, 'public'),
+    staticOptions,
+));
+
+const expressServer = app.listen(portNumber, () => {
+    console.log(`Server listening on port ${portNumber}`);
+});
+
+const io = new Server(expressServer, {
     cors: {
         origin: process.env.NODE_ENV === 'production' ? false : ['http://127.0.0.1:5500'],
     },
@@ -27,12 +46,8 @@ io.on('connection', (socket) => {
     });
 });
 
-httpServer.listen(portNumber, () => {
-    console.log(`Server listening on port ${portNumber}`);
-});
-
 async function openairesponse (data) {
-    let response = spawnSync('python', ['../../inference/fn.py', '-f', '../../prob_model/data.json', '-m', data]);
+    let response = spawnSync('python', ['../inference/fn.py', '-f', '../inference/data.json', '-m', data]);
     // wait for two seconds
     console.log(response.stdout.toString());
     console.log(response.stderr.toString());
