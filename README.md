@@ -1,10 +1,11 @@
-![example](assets/proj.png)
+![banner](https://github.com/InternationallyLate/InternationallyLate/assets/19315384/ad74a572-4b10-4d29-a551-29bb630de9f3)
+
 # InternationallyLate
 
 This project enables interaction with LLM via the OpenAI API.
   
 # Project Workflow 
-![work_flow](assets/work_flow.png)
+![work_flow](https://github.com/InternationallyLate/InternationallyLate/assets/19315384/a04dca8a-3d95-4925-accb-5efc6f38eb47)
 
 ## Setup
 
